@@ -1,5 +1,5 @@
 # Import Modules
-from englisttohindi.englisttohindi import EngtoHindi
+from englisttohindi import EngtoHindi
 import json
 
 # read dictionary file
@@ -10,8 +10,7 @@ with open('dictionary/bho-hin.json', 'r') as myfile:
 bhojpuri = json.loads(data)
 
 def translator(txt):
-	str = EngtoHindi(txt)
-	res = str.convert
+	res = EngtoHindi(txt)
 	if res in bhojpuri:
 		return bhojpuri[res]
 	else:
